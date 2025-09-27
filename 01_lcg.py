@@ -28,6 +28,10 @@ def lcg(m, a, c, x0, n):
 
     resultados = []
     x = x0
+
+    u = x / m             
+    resultados.append((x, u))
+
     for _ in range(n):
         x = (a * x + c) % m   # recorrência
         u = x / m             # normalização
@@ -36,7 +40,7 @@ def lcg(m, a, c, x0, n):
     print(f"{'n':^6}|{'Xn':^6}|{'Un':^6}")
     print("-"*20)
 
-    for i, (x, u) in enumerate(resultados, start=1):
+    for i, (x, u) in enumerate(resultados, start=0):
         print(f"{i:^6}|{x:^6}|{u:^6.6f}")
 
     print("\nSequência gerada:", [x for x, u in resultados])
