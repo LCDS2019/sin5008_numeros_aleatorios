@@ -81,19 +81,29 @@ class MT19937:
 
 ################################################################################
 
-mt = MT19937(seed=1234)
+print("--------------------------------------------------------------")
+print("Geração de números pseudoaleatórios usando o Mersenne Twister")
+print("--------------------------------------------------------------")
 
-# 3 inteiros de 32 bits
-print(mt.rand_uint32(), mt.rand_uint32(), mt.rand_uint32())
+mt = MT19937(seed=5489)
+
+seq = []    
+for i in range(5):
+    Xn = mt.rand_uint32()
+    Un = Xn / 0xFFFFFFFF
+    print(f'X{i+1} = {Xn:10d}  U{i+1} = {Un:.10f}')
+    seq.append(Un)
+
+print("\nSequência gerada:", seq)
 
 # 3 floats em [0,1)
-print(mt.random(), mt.random(), mt.random())
+#print(mt.random(), mt.random(), mt.random())
 
 # Inteiro uniforme em [10, 20]
-print(mt.randint(10, 20))
+#print(mt.randint(10, 20))
 
 # Uniforme contínua em [5.0, 7.5)
-print(mt.uniform(5.0, 7.5))
+#print(mt.uniform(5.0, 7.5))
 
 ################################################################################
 
