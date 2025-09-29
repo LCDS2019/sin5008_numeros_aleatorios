@@ -19,3 +19,6 @@ source .venv/bin/activate
 python -m venv .venv
 .venv\Scripts\Activate
 
+## 🔹 Instalar dependências
+pip install --upgrade pip
+pip install -r requirements.txt
