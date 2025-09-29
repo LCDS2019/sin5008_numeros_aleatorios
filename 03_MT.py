@@ -90,11 +90,12 @@ mt = MT19937(seed=5489)
 seq = []    
 for i in range(5):
     Xn = mt.rand_uint32()
-    Un = Xn / 0xFFFFFFFF
+    Un = Xn / 2**32
     print(f'X{i+1} = {Xn:10d}  U{i+1} = {Un:.10f}')
     seq.append(Un)
 
 print("\nSequência gerada:", seq)
+
 
 # 3 floats em [0,1)
 #print(mt.random(), mt.random(), mt.random())
