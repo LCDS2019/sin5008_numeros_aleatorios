@@ -87,6 +87,8 @@ print("--------------------------------------------------------------")
 
 mt = MT19937(seed=5489)
 
+print(f'Semente: {mt.state[0]}'+'\n')
+
 seq = []    
 for i in range(5):
     Xn = mt.rand_uint32()
