@@ -26,4 +26,4 @@ pip install -r requirements.txt
 # Observações:
 Não é necessário instalar o requirements para executar os arquivos .py.
 No linux, para executar os arquivos .py, utilize o comando: python3 03_MT.py
-Para arquivos .R, instale as dependências descritos no requirements.txt .
+Para arquivos .R, instale as dependências descritos no requirements.txt.
