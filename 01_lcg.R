@@ -30,7 +30,8 @@ lcg <- function(m, a, c, x0, n) {
   
   end <- Sys.time()     # marca o tempo final
   tempo <- end - start
-  cat(sprintf("\nTempo total de execução:", as.numeric(tempo, units="secs")))
+
+  cat("\nTempo total de execução:", as.numeric(tempo, units = "secs"), "segundos\n")
   
   invisible(data.frame(iter = iter, Xn = Xn, Un = Un, check.names = FALSE))
 }
