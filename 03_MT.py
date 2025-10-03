@@ -90,7 +90,7 @@ mt = MT19937(seed=5489)
 print(f'Semente: {mt.state[0]}'+'\n')
 
 seq = []    
-for i in range(5):
+for i in range(15):
     Xn = mt.rand_uint32()
     Un = Xn / 2**32
     print(f'X{i+1} = {Xn:10d}  U{i+1} = {Un:.10f}')
